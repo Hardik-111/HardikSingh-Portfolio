@@ -11,8 +11,8 @@ const projectsData = [
     description: " A dynamic and interactive portfolio showcasing my skills and projects built using Next.js and React, featuring modern design elements and seamless navigation.",
     image: "./images/projects/portfolio1.png",
     tag: ["All", "Web"],
-    gitUrl: "./",
-    previewUrl: "./",
+    gitUrl: "https://github.com/Hardik-111/HardikSingh-Portfolio",
+    previewUrl: "https://github.com/Hardik-111/HardikSingh-Portfolio",
   },
   {
     id: 2,
