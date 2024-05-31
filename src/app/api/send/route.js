@@ -1,6 +1,7 @@
+// api/send.js
+
 import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
-import fs from 'fs';
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
@@ -13,9 +14,8 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function POST(req, res) {
-  const { email,subject, message } = await req.json();
-
   try {
+    const { email, subject, message } = await req.json();
 
     // Send email to your email address
     const info1 = await transporter.sendMail({
