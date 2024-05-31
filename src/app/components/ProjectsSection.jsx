@@ -12,7 +12,7 @@ const projectsData = [
     image: "./images/projects/portfolio1.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Hardik-111/HardikSingh-Portfolio",
-    previewUrl: "https://github.com/Hardik-111/HardikSingh-Portfolio",
+    previewUrl: "https://hardik-111.github.io/HardikSingh-Portfolio/",
   },
   {
     id: 2,
