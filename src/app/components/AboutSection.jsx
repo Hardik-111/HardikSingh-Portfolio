@@ -94,7 +94,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a prefinal year student at MNNIT Allahabad, Prayagraj with a
+            I am a final year student at MNNIT Allahabad, Prayagraj with a
             passion for building innovative web products. Thriving in
             collaborative environments, I leverage my web dev skills and DSA
             knowledge to deliver exceptional results. A quick learner with a
