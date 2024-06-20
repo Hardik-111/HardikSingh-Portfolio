@@ -4,7 +4,8 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
-import axios from 'axios';
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -27,13 +28,20 @@ const EmailSection = () => {
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+    try {
+      const response = await fetch(endpoint, options);
+      const resData = await response.json();
 
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+      if (response.status === 200) {
+        setEmailSubmitted(true);
+        toast.success("Email sent successfully!");
+      } else {
+        toast.error("Failed to send email.");
+      }
+    } catch (error) {
+      toast.error("An error occurred.");
     }
+
     e.target.reset();
   };
 
@@ -127,6 +135,7 @@ const EmailSection = () => {
           </form>
         )}
       </div>
+      <ToastContainer />
     </section>
   );
 };
